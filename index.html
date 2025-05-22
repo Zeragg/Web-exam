@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>First Fitness</title>
+  </head>
+  <body>
+    <div class="modal fade" id="scheduleModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Schedule</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="schedule-table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%">Day</th>
+                    <th style="width: 20%">Time</th>
+                    <th style="width: 30%">Workout</th>
+                    <th style="width: 30%">Trainer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Rows will be added via JavaScript -->
+                </tbody>
+              </table>
+            </div>
+            <div class="additional-info mt-3">
+              <!-- Information will be added via JavaScript -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header" id="home">
+      <div class="container">
+        <div class="header-line">
+          <div class="burger-menu" onclick="toggleMenu()">☰</div>
+          <div class="nav-items">
+            <div class="nav">
+              <a class="nav-item" href="#home">Home</a>
+              <a class="nav-item" href="#about">About</a>
+              <a class="nav-item" href="#contact">Contact</a>
+              <a class="nav-item" href="instructors.html">Trainers</a>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="number">
+              <a class="num" href="tel:+77076232348">+7-707-623-23-48</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-down">
+          <div class="header-title">
+            Welcome to the GYM world!
+            <div class="header-subtitle">
+              <span class="white-text"> First</span
+              ><span class="yellow-text"> Fitness</span>
+            </div>
+            <div class="header-bth">
+              <a href="#direction" class="header-button"> Choose Membership </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards" id="direction">
+      <div class="container">
+        <div class="cards-holder">
+          <div class="card">
+            <img
+              src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/4e954747249457.5874fa512c3f0.jpg"
+              class="card-img-top"
+              alt="Personal Trainers"
+            />
+            <div class="card-title">Workout</div>
+            <p class="card-text">
+              Our certified trainers will help you achieve your fitness goals.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="https://i.pinimg.com/originals/f6/a3/48/f6a34890142c400d42dd3f25c44bbf9f.jpg"
+              class="card-img-top"
+              alt="Basketball Training"
+            />
+            <h5 class="card-title">Basketball</h5>
+            <p class="card-text">
+              Improve your skills with our professional basketball program.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="https://avatars.mds.yandex.net/get-altay/3932123/2a00000176fbeaa8861393328e2172896b0c/XXXL"
+              class="card-img-top"
+              alt="Yoga and Pilates"
+            />
+            <h5 class="card-title">Yoga and Pilates</h5>
+            <p class="card-text">
+              Find your balance and strengthen your core with our classes.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="https://sportishka.com/uploads/posts/2022-11/1667459932_10-sportishka-com-p-borba-greppling-pinterest-11.jpg"
+              class="card-img-top"
+              alt="Grappling Training"
+            />
+            <div class="card-title">Grappling</div>
+            <p class="card-text">
+              Master submission techniques in our grappling classes.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="https://www.fp-santagema.es/wp-content/uploads/2023/04/83151043_m_normal_none.jpg"
+              class="card-img-top"
+              alt="Dance Classes"
+            />
+            <h5 class="card-title">Dance</h5>
+            <p class="card-text">
+              Express yourself through movement in our diverse dance programs.
+            </p>
+          </div>
+          <div class="card">
+            <img
+              src="https://cdn.culture.ru/images/958d0ea9-f55c-5ab3-88ea-b657d33b55d5"
+              class="card-img-top"
+              alt="Aikido Training"
+            />
+            <h5 class="card-title">Aikido</h5>
+            <p class="card-text">
+              Learn the art of harmony and self-defense with our masters.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="company" id="about">
+      <div class="container">
+        <div class="company-holder">
+          <div class="company-text">
+            <div class="company-title">About Our Gym</div>
+            <div class="company-desk">
+              "First Fitness" is a premium fitness center offering a wide range of training programs for all levels. We create transformative experiences, ensuring your progress at every step of your fitness journey. With us, your best shape is just a workout away!
+            </div>
+          </div>
+          <div class="company-images">
+            <img class="image-1" src="images/1.jpg" alt="Gym interior" />
+            <img class="image-2" src="images/2.jpg" alt="Group training" />
+            <img class="image-3" src="images/22.jpg" alt="Personal training" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="contact">
+      <div class="flex-layout">
+        <div class="left-column">
+          <h2>Fitness Tips and Articles</h2>
+          <p>
+            Regular exercise opens up new possibilities and helps you understand your body's potential.
+          </p>
+          <p>
+            As you plan your fitness journey, remember: every workout brings you closer to your goals!
+          </p>
+
+          <div class="travel-map-container">
+            <h3>Our Location</h3>
+            <div class="travel-map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2484.0348103186207!2d76.8777224858766!3d43.21301399358937!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x388369594171b3a9%3A0xa44848e05d6e645c!2sFirstFitness!5e0!3m2!1sru!2skz!4v1747920442190!5m2!1sru!2skz"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="contact-form-wrapper">
+            <h3>Contact Us</h3>
+            <form action="#" method="POST" id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Full Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-control" id="subject">
+                  <option value="">Select Subject</option>
+                  <option value="membership">Membership</option>
+                  <option value="training">Personal Training</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  placeholder="Your Message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+              <div id="formMessage" class="form-message"></div>
+            </form>
+
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>+7 (707) 623-23-48</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@firstfitness.com</span>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon-Fri: 6:00 AM - 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>Follow us:</p>
+        <div class="social-links">
+          <a href="https://api.whatsapp.com/send/?phone=%2B77071640657&text&type=phone_number&app_absent=0"><img src="images/whatsup_01.png" alt="WhatsApp" /></a>
+          <a href="https://www.instagram.com/firstfitnesskz/"><img src="images/instagram.png" alt="Instagram" /></a>
+        </div>
+        <p>&copy; 2025 First Fitness. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
